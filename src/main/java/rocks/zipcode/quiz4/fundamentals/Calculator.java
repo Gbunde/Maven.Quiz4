@@ -9,15 +9,23 @@ public class Calculator {
     }
 
     public static Double square(Double value) {
-        return value * value;
+        return value*value;
     }
 
     public static Double[] squareRoots(Double... value) {
-        return null;
+        Double[] squaredArr = new Double[value.length];
+        for (int i = 0; i < value.length; i++){
+            squaredArr[i] = squareRoot(value[i]);
+        }
+        return squaredArr;
     }
 
     public static Double[] squares(Double... values) {
-        return null;
+        Double[] squaredArr = new Double[values.length];
+        for (int i = 0; i < values.length; i++){
+            squaredArr[i] = square(values[i]);
+        }
+        return squaredArr;
     }
 
     public static Double add(Double value1, Double value2) {
